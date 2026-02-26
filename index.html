@@ -1,148 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Piano Portfolio | Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER (same on every page) -->
-  <header class="site-header">
-    <div class="container">
-      <nav class="navbar" aria-label="Main navigation">
-        <a class="brand" href="index.html">
-          <span class="brand-badge" aria-hidden="true"></span>
-          <span>Piano Portfolio</span>
-        </a>
+<header>
+  <div class="container nav">
+    <h2 class="logo">Piano Portfolio</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="gallery.html">Gallery</a>
-          <a class="nav-cta" href="contact.html">Contact</a>
-        </div>
-      </nav>
+<section class="hero">
+  <div class="container hero-content">
+    <div>
+      <h1>Music Is My Language</h1>
+      <p>A portfolio of piano performances, practice, and passion.</p>
+      <a class="btn" href="gallery.html">View Gallery</a>
     </div>
-  </header>
+    <img src="images/img13.png" alt="Hero Piano">
+  </div>
+</section>
 
-  <!-- HERO / “SLIDER” PLACEHOLDER (CSS-only, static for now) -->
-  <section class="section">
-    <div class="container">
-      <div class="panel two-col">
-        <div>
-          <h1>Music is my language.</h1>
-          <p>
-            Welcome to my piano portfolio — performances, practice moments, and the story behind
-            every piece I learn.
-          </p>
-          <a class="btn" href="gallery.html">View Performances</a>
-          <a class="btn secondary" href="about.html" style="margin-left:10px;">My Story</a>
-
-          <p style="margin-top:14px;">
-            <strong style="color: var(--text);">Slider note:</strong>
-            This hero is a “3 slide” area — we’ll style it next. No JavaScript.
-          </p>
-        </div>
-
-        <div>
-          <img src="images/hero-1.jpg" alt="A piano close-up (placeholder image)" />
-        </div>
-      </div>
+<section class="section">
+  <div class="container two-col">
+    <img src="images/img12.png" alt="About Preview">
+    <div>
+      <h2>About Me</h2>
+      <p>I started piano young and learned that music tells stories without words.</p>
+      <a class="btn-outline" href="about.html">Read More</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ABOUT PREVIEW -->
-  <section class="section">
-    <div class="container">
-      <div class="two-col">
-        <div class="panel">
-          <h2>About Me</h2>
-          <p>
-            I started piano young and fell in love with patterns, emotion, and the challenge of
-            turning notes into meaning. I enjoy classical pieces, film scores, and anything that
-            tells a story.
-          </p>
-          <a class="btn secondary" href="about.html">Read More</a>
-        </div>
-
-        <div class="panel">
-          <img src="images/about-preview.jpg" alt="Piano bench or sheet music (placeholder image)" />
-        </div>
-      </div>
+<section class="section">
+  <div class="container">
+    <h2>Gallery Preview</h2>
+    <div class="grid-3">
+      <img src="images/img1.png" alt="">
+      <img src="images/img2.png" alt="">
+      <img src="images/img3.png" alt="">
+      <img src="images/img4.png" alt="">
+      <img src="images/img5.png" alt="">
+      <img src="images/img6.png" alt="">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FEATURES / SERVICES -->
-  <section class="section">
-    <div class="container">
-      <h2>What You’ll Find Here</h2>
-      <p class="subtitle">Practice, performances, and progress — all in one place.</p>
-
-      <div class="grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 14px;">
-        <div class="panel">
-          <h3>Performances</h3>
-          <p>Recitals, recordings, and favorite moments from pieces I’ve played.</p>
-        </div>
-        <div class="panel">
-          <h3>Practice Logs</h3>
-          <p>How I break down hard measures, build speed, and fix mistakes.</p>
-        </div>
-        <div class="panel">
-          <h3>Pieces & Notes</h3>
-          <p>Short reflections on composers, styles, and what each piece teaches me.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY PREVIEW -->
-  <section class="section">
-    <div class="container">
-      <h2>Gallery Preview</h2>
-      <p class="subtitle">A quick look — the full collection is on the Gallery page.</p>
-
-      <div class="grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 14px;">
-        <img class="panel" src="images/gallery-1.jpg" alt="Gallery image 1 (placeholder)" />
-        <img class="panel" src="images/gallery-2.jpg" alt="Gallery image 2 (placeholder)" />
-        <img class="panel" src="images/gallery-3.jpg" alt="Gallery image 3 (placeholder)" />
-        <img class="panel" src="images/gallery-4.jpg" alt="Gallery image 4 (placeholder)" />
-        <img class="panel" src="images/gallery-5.jpg" alt="Gallery image 5 (placeholder)" />
-        <img class="panel" src="images/gallery-6.jpg" alt="Gallery image 6 (placeholder)" />
-      </div>
-
-      <div style="margin-top: 18px;">
-        <a class="btn" href="gallery.html">See Full Gallery</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CALL TO ACTION -->
-  <section class="section">
-    <div class="container">
-      <div class="panel two-col">
-        <div>
-          <h2>Want to collaborate?</h2>
-          <p>
-            If you want to talk about music, performances, or projects, send a message — I’d love
-            to connect.
-          </p>
-          <a class="btn" href="contact.html">Contact Me</a>
-        </div>
-        <div>
-          <img src="images/cta.jpg" alt="A grand piano or stage lights (placeholder image)" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER (same on every page) -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 Piano Portfolio • Built with HTML & CSS</p>
-    </div>
-  </footer>
+<footer>
+  <p>© 2026 Piano Portfolio</p>
+</footer>
 
 </body>
 </html>
