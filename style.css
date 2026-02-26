@@ -208,3 +208,80 @@ p {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   HOME HERO “SLIDER” LOOK (CSS-only)
+   (Static layout for now; looks like a slider)
+========================= */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.hero img {
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+
+/* =========================
+   GALLERY GRID
+========================= */
+.gallery-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-grid img {
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  transition: transform 0.18s ease;
+}
+
+.gallery-grid img:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive gallery columns */
+@media (max-width: 1000px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(202,164,90,0.55);
+  box-shadow: 0 0 0 4px rgba(202,164,90,0.12);
+}
+
+.form-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 700px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
