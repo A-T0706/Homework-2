@@ -1,1 +1,4 @@
-
+Amayra Talwar 
+I built a multi-page portfolio website on piano. The website includes a home page, about page, gallery page, projects page (bonus), and contact page. The about page talks about my progress and journey piano playing. The gallery page displays images of different pianos. The project page talks about what I learned throughout my experience. 
+I utilized ChatGPT throughout this project. It helped me plan the layout structure, deveop the code for the html files, as well as the css file. It helped me fix broken image links and any issues I came across. I asked for guidance step by step, understanding more on how GitHub works as I progressed. 
+I uploaded images, renamed files, and changed image paths so they would work correctly. I reviewed each page, making sure the website was running smoothly and the images appeared correctly. I made the files and inserted code (given by ChatGPT), updated the repository myself, and published the website. Additionally, I prompted ChatGPT on my own when there was an issue. 
