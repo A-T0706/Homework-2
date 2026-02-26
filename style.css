@@ -1,287 +1,135 @@
-/* =========================
-   GLOBAL RESET + BASE
-========================= */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.6;
-  color: #111;
-  background: #0b0b0f;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
 }
 
 .container {
-  width: min(1100px, 92%);
-  margin: 0 auto;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+header {
+  background: #000;
+  padding: 15px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 60px 0;
+}
+
+.hero-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
 .section {
-  padding: 64px 0;
+  padding: 60px 0;
 }
 
-/* =========================
-   COLORS / UI
-========================= */
-:root {
-  --bg: #0b0b0f;
-  --panel: rgba(255, 255, 255, 0.06);
-  --panel-strong: rgba(255, 255, 255, 0.10);
-  --text: #f4f4f6;
-  --muted: rgba(244, 244, 246, 0.72);
-  --line: rgba(244, 244, 246, 0.15);
-  --gold: #caa45a;
-  --shadow: 0 10px 30px rgba(0,0,0,0.35);
-}
-
-/* =========================
-   HEADER / NAV
-========================= */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(11, 11, 15, 0.75);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-}
-
-.navbar {
+.two-col {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 0;
-  gap: 16px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  letter-spacing: 0.4px;
-  color: var(--text);
-}
-
-.brand-badge {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, rgba(202,164,90,0.9), rgba(202,164,90,0.2));
-  border: 1px solid rgba(202,164,90,0.35);
-  box-shadow: var(--shadow);
-}
-
-.nav-links {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
+  gap: 30px;
   align-items: center;
 }
 
-.nav-links a {
-  color: var(--muted);
-  font-weight: 600;
-  padding: 8px 10px;
-  border-radius: 10px;
+.reverse {
+  flex-direction: row-reverse;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-  outline: none;
-  color: var(--text);
-  background: var(--panel);
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 
-.nav-cta {
-  border: 1px solid rgba(202,164,90,0.35);
-  color: var(--text) !important;
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-.site-footer {
-  border-top: 1px solid var(--line);
-  padding: 28px 0;
-  color: var(--muted);
-  text-align: center;
-}
-
-/* =========================
-   TYPOGRAPHY + BUTTONS
-========================= */
-h1, h2, h3 {
-  line-height: 1.2;
-  color: var(--text);
-  margin: 0 0 12px;
-}
-
-p {
-  margin: 0 0 14px;
-  color: var(--muted);
+img {
+  width: 100%;
+  border-radius: 8px;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 16px;
-  border-radius: 14px;
-  font-weight: 700;
-  border: 1px solid rgba(202,164,90,0.35);
-  background: linear-gradient(135deg, rgba(202,164,90,0.95), rgba(202,164,90,0.25));
-  color: #111;
-  box-shadow: var(--shadow);
+  padding: 10px 15px;
+  background: gold;
+  color: black;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
-.btn:hover,
-.btn:focus {
-  outline: none;
-  transform: translateY(-1px);
+.btn-outline {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 2px solid gold;
+  color: gold;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
-.btn.secondary {
-  background: transparent;
-  color: var(--text);
-  border: 1px solid var(--line);
+.page-title {
+  text-align: center;
+  padding: 40px 0;
 }
 
-/* =========================
-   PAGE TITLE BANNER
-========================= */
-.page-hero {
-  padding: 54px 0 30px;
-  border-bottom: 1px solid var(--line);
-  background: radial-gradient(800px 250px at 25% 0%, rgba(202,164,90,0.20), transparent),
-              radial-gradient(700px 240px at 75% 0%, rgba(255,255,255,0.08), transparent);
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.page-hero .subtitle {
-  max-width: 60ch;
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
-/* =========================
-   SIMPLE LAYOUT HELPERS
-========================= */
-.panel {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: var(--shadow);
+button {
+  padding: 10px;
+  background: gold;
+  border: none;
+  cursor: pointer;
 }
 
-.two-col {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 22px;
-  align-items: center;
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  margin-top: 40px;
 }
 
-.grid {
-  display: grid;
-  gap: 14px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 800px) {
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content,
   .two-col {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
-}
-/* =========================
-   HOME HERO “SLIDER” LOOK (CSS-only)
-   (Static layout for now; looks like a slider)
-========================= */
-.hero {
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-}
 
-.hero img {
-  border-radius: 16px;
-  border: 1px solid var(--line);
-}
-
-/* =========================
-   GALLERY GRID
-========================= */
-.gallery-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.gallery-grid img {
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  transition: transform 0.18s ease;
-}
-
-.gallery-grid img:hover {
-  transform: translateY(-2px);
-}
-
-/* Responsive gallery columns */
-@media (max-width: 1000px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 650px) {
-  .gallery-grid {
+  .grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-/* =========================
-   CONTACT FORM
-========================= */
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  margin-top: 8px;
-  padding: 12px 12px;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-  font-size: 1rem;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: rgba(202,164,90,0.55);
-  box-shadow: 0 0 0 4px rgba(202,164,90,0.12);
-}
-
-.form-grid {
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-@media (max-width: 700px) {
-  .form-grid {
-    grid-template-columns: 1fr;
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
